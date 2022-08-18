@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#allot-main{
+position: relative;
+z-index: 1;
+min-height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+/* justify-content: center; */
+}
+
+::-webkit-scrollbar{
+display: none;
+}
+
+#bg-container{
+position: fixed;
+z-index: 0;
+min-height: 100vh;
+width: 100%;
+background-image: url(../../../public/1.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+.allotments{
+    height:10em;
+    width: 26%;
+    background-color: rgb(240, 240, 240);
+    border-radius: 1em;
+    box-sizing: content-box;
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:justify;
+    font-family: cursive;
+    
+}
+.content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3em 0em;
+}
+
+
+#search-parent{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+}
+#search-parent input{
+    border: 3px solid transparent;
+    font-size: 1em;
+    margin-top: 2em;
+    height:3em;
+    width: 40vw;
+    outline: none;
+    /* border: 1px solid gray; */
+    padding-left:1em;
+    padding-right:1em
+    }
+
+    #search-parent input:focus  {
+        border: 3px solid rgb(255, 187, 61);;
+        }
+
+    #search-parent button{
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 2em;
+        height:3em;
+        width: 4em;
+        outline: none;
+        border: 1px solid gray;
+        padding-left:1em;
+        padding-right:1em;
+        background-color: rgb(255, 187, 61);
+            border-radius: 0 .2em 1em 0;
+        } 
+        
+        #search-parent button:hover{
+            background-color: rgb(255, 172, 19);
+            border: 1px solid rgb(255, 145, 0);
+        }
+        #search-parent button:active{
+            background-color: rgb(255, 201, 102);
+            
+        }
+
+        #no-content{
+            background-image:url( "../../../public/2.png");
+            background-color: rgb(94, 94, 94);
+            height: 12em;
+            width: 12em;
+            border-radius: 50%;
+            background-color: aqua;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            animation: rotate 2s ease-in-out infinite alternate;
+        }
+
+
+@keyframes rotate {
+    from{
+        transform:rotate(-20deg);
+    }
+    to{
+        transform:rotate(+20deg);
+    }
+}
+
+@media screen and (max-width:670px){
+    
+    .allotments{
+        width: 68%;
+    }
+    #search-parent input{
+        width:60%;
+    }
+}
+
+@media screen and (max-width:421px){
+    .allotments{
+        width: 100%;
+    }
+}

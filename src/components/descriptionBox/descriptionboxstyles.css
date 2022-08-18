@@ -1,0 +1,94 @@
+.description-box-container{
+    display: grid;
+    place-items: center;
+    margin: .6em;
+    font-family:cursive ;
+   
+}
+.description-content-box{
+text-align: center;
+height: 20em;
+width: 20em;
+position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;  
+transition: 2s;
+transform-style: preserve-3d;
+
+}
+.description-box-container:hover .description-content-box{
+    /* height:25em;
+    width: 25em; */
+    transform: rotateY(.5turn);
+    }
+
+.description-back, .description-front{
+    backface-visibility: hidden;
+    background-color: black;
+    transform-style: preserve-3d;
+    height: 20em;
+    width: 20em;
+    position:absolute;
+    color: white;
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.description-front{
+    
+}
+.description-back{
+    border:4px solid rgb(175, 0, 0);
+transform: rotateY(.50turn);
+color: rgb(0, 0, 0);
+display: grid;
+place-items: center;
+}
+.description-title{
+    border-radius: 0 0 8% 8% ;
+    background-color: rgb(175, 0, 0);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* transform: translateZ(2em); */
+ 
+}
+.description-subtitle{
+    /* transform: translateZ(3em); */
+ 
+}
+.description-year-rank{
+    right:0px;
+    border-radius: 8% 8% 0 0;
+    background-color: rgb(175, 0, 0);
+    position: absolute;
+    bottom:0px;
+    transform: translateZ(3em);
+    
+}
+
+
+.image-container{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    transform: translateZ(.5em);
+}
+ .description-front  img{
+    height: 20em;
+    width: 20em;
+}
+.description-back img{
+    height: 20em;
+    width: 20em;
+}
